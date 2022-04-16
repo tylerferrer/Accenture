@@ -49,8 +49,8 @@ public class Hooks {
 	 } 
 	 }
 
-//	@After(order = 0)
-//	public void AfterSteps() {
-//		Context.getWebDriverManager().closeDriver();
-//	}
+	@After(order = 0)
+	public void AfterSteps() {
+		Context.getWebDriverManager().closeDriver();
+	}
 }

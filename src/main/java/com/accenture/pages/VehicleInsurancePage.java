@@ -110,8 +110,43 @@ public class VehicleInsurancePage {
 	@FindBy(how = How.ID, using = "sendemail")
 	public WebElement btn_SendEmail;
 	
+	@FindBy(how = How.XPATH, using = "//*/li[1]/a/span")
+	public WebElement span_counter_vehicle;
+	
+	@FindBy(how = How.XPATH, using = "//*/li[2]/a/span")
+	public WebElement span_counter_insurant;
+	
+	@FindBy(how = How.XPATH, using = "//*/li[3]/a/span")
+	public WebElement span_counter_product;
+	
+	@FindBy(how = How.XPATH, using = "//*/li[4]/a/span")
+	public WebElement span_counter_price;
+	
+	@FindBy(how = How.XPATH, using = "//*/li[5]/a/span")
+	public WebElement span_counter_send;
+	
 	public void navegar_para_pagina_principal() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+	}
+	
+	public String Verificar_Counter_Vehicle() throws Exception {
+		return span_counter_vehicle.getText();
+	}
+	
+	public String Verificar_Counter_Insurant() throws Exception {
+		return span_counter_insurant.getText();
+	}
+	
+	public String Verificar_Counter_Product() throws Exception {
+		return span_counter_product.getText();
+	}
+	
+	public String Verificar_Counter_Price() throws Exception {
+		return span_counter_price.getText();
+	}
+	
+	public String Verificar_Counter_Send() throws Exception {
+		return span_counter_send.getText();
 	}
 	
 	public boolean getNomeForm() {
